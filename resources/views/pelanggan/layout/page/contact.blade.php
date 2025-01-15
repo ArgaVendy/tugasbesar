@@ -2,30 +2,35 @@
 
 @section('content')
     <div class="d-flex justify-content-lg-between mt-5">
-        <div class="card mb-3 gap-3" style="width: 28rem;">
-            <img src="{{ asset('images/person1.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
-            <div class="card-body">
-                <h5 class="card-title">ArgaVendy</h5>
-                <p class="card-text">152023027</p>
-                <a href="https://www.instagram.com/arvndy_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-primary">Instagram</a>
-            </div>
+        <!-- Card 1 -->
+    <div class="card mb-3 gap-3" style="width: 28rem;">
+        <img src="{{ asset('assets/images/profile/arga.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
+        <div class="card-body">
+            <h5 class="card-title">Arga</h5>
+            <p class="card-text">152023027</p>
+            <a href="https://www.instagram.com/arvndy_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-primary">Instagram</a>
         </div>
-        <div class="card mb-3 gap-3" style="width: 28rem;">
-            <img src="{{ asset('images/person2.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
-            <div class="card-body">
-                <h5 class="card-title">CIO</h5>
-                <p class="card-text">152023120</p>
-                <a href="https://www.instagram.com/amsatrgsilangit/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn btn-primary">Instagram</a>
-            </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="card mb-3 gap-3" style="width: 28rem;">
+        <img src="{{ asset('assets/images/profile/cio.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
+        <div class="card-body">
+            <h5 class="card-title">Cio</h5>
+            <p class="card-text">152023120</p>
+            <a href="https://www.instagram.com/amsatrgsilangit/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn btn-primary">Instagram</a>
         </div>
-        <div class="card mb-3 gap-3" style="width: 28rem;">
-            <img src="{{ asset('images/person3.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
-            <div class="card-body">
-                <h5 class="card-title">Dean</h5>
-                <p class="card-text">152023115</p>
-                <a href="https://www.instagram.com/uknownz_24/" target="_blank" class="btn btn-primary">Instagram</a>
-            </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="card mb-3 gap-3" style="width: 28rem;">
+        <img src="{{ asset('assets/images/profile/dean.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
+        <div class="card-body">
+            <h5 class="card-title">Dean</h5>
+            <p class="card-text">152023115</p>
+            <a href="https://www.instagram.com/uknownz_24/" target="_blank" class="btn btn-primary">Instagram</a>
         </div>
+    </div>
     </div>
 
     <h4 class="text-center mt-md-5 mb-md-2" style="color: white">Contact Us</h4>
@@ -116,7 +121,7 @@
             }
 
             if (valid) {
-                Swal.fire('Terima kasih!', Kritik dan saran dari ${username.value} berhasil dikirim., 'success');
+                Swal.fire('Terima kasih!', `Kritik dan saran dari ${username.value} berhasil dikirim.`, 'success');
                 const feedbackData = `
                     <div class="card mt-3">
                         <div class="card-body">
@@ -135,4 +140,5 @@
 
         renderFeedbacks();
     </script>
-@endsection 
+
+@endsection
