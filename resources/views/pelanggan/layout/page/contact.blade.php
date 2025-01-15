@@ -3,34 +3,34 @@
 @section('content')
     <div class="d-flex justify-content-lg-between mt-5">
         <!-- Card 1 -->
-    <div class="card mb-3 gap-3" style="width: 28rem;">
-        <img src="{{ asset('assets/images/profile/arga.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
-        <div class="card-body">
-            <h5 class="card-title">Arga</h5>
-            <p class="card-text">152023027</p>
-            <a href="https://www.instagram.com/arvndy_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-primary">Instagram</a>
+        <div class="card mb-3 gap-3" style="width: 28rem;">
+            <img src="{{ asset('assets/images/profile/arga.jpg') }}" class="card-img-top card-img-custom" alt="Arga">
+            <div class="card-body">
+                <h5 class="card-title">Arga</h5>
+                <p class="card-text">152023027</p>
+                <a href="https://www.instagram.com/arvndy_?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="btn btn-primary">Instagram</a>
+            </div>
         </div>
-    </div>
 
-    <!-- Card 2 -->
-    <div class="card mb-3 gap-3" style="width: 28rem;">
-        <img src="{{ asset('assets/images/profile/cio.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
-        <div class="card-body">
-            <h5 class="card-title">Cio</h5>
-            <p class="card-text">152023120</p>
-            <a href="https://www.instagram.com/amsatrgsilangit/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn btn-primary">Instagram</a>
+        <!-- Card 2 -->
+        <div class="card mb-3 gap-3" style="width: 28rem;">
+            <img src="{{ asset('assets/images/profile/cio.jpg') }}" class="card-img-top card-img-custom" alt="Cio">
+            <div class="card-body">
+                <h5 class="card-title">Cio</h5>
+                <p class="card-text">152023120</p>
+                <a href="https://www.instagram.com/amsatrgsilangit/?utm_source=ig_web_button_share_sheet" target="_blank" class="btn btn-primary">Instagram</a>
+            </div>
         </div>
-    </div>
 
-    <!-- Card 3 -->
-    <div class="card mb-3 gap-3" style="width: 28rem;">
-        <img src="{{ asset('assets/images/profile/dean.jpg') }}" class="card-img-top object-fit-cover" style="height: 350px;">
-        <div class="card-body">
-            <h5 class="card-title">Dean</h5>
-            <p class="card-text">152023115</p>
-            <a href="https://www.instagram.com/uknownz_24/" target="_blank" class="btn btn-primary">Instagram</a>
+        <!-- Card 3 -->
+        <div class="card mb-3 gap-3" style="width: 28rem;">
+            <img src="{{ asset('assets/images/profile/dean.jpg') }}" class="card-img-top card-img-custom" alt="Dean">
+            <div class="card-body">
+                <h5 class="card-title">Dean</h5>
+                <p class="card-text">152023115</p>
+                <a href="https://www.instagram.com/uknownz_24/" target="_blank" class="btn btn-primary">Instagram</a>
+            </div>
         </div>
-    </div>
     </div>
 
     <h4 class="text-center mt-md-5 mb-md-2" style="color: white">Contact Us</h4>
@@ -140,5 +140,13 @@
 
         renderFeedbacks();
     </script>
-
 @endsection
+
+<style>
+    /* CSS untuk memastikan gambar tampil dengan baik */
+    .card-img-custom {
+        width: 100%;
+        height: 350px;
+        object-fit: contain; /* Menampilkan gambar tanpa terpotong */
+    }
+</style>
