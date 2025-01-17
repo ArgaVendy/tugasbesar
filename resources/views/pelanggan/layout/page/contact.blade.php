@@ -44,20 +44,21 @@
                 </div>
                 <div class="card-body" style="padding: 20px;">
                     <p class="text-center mb-4">Kami sangat menghargai masukan Anda untuk meningkatkan layanan kami.</p>
-                    <form id="feedbackForm">
+                    <form id="feedbackForm" action="/feedback" method="POST" enctype="multipart/form-data">
+                        @csrf
                         <div class="mb-3">
                             <label for="username" class="form-label">Username</label>
-                            <input type="text" class="form-control" id="username" placeholder="Masukkan username Anda" required>
+                            <input type="text" class="form-control" id="username" name="username" placeholder="Masukkan username Anda" required>
                             <div class="invalid-feedback">Username tidak boleh kosong.</div>
                         </div>
                         <div class="mb-3">
                             <label for="pesan" class="form-label">Pesan</label>
-                            <textarea class="form-control" id="pesan" rows="3" placeholder="Tulis pesan Anda" required></textarea>
+                            <textarea class="form-control" id="pesan" rows="3" name="pesan" placeholder="Tulis pesan Anda" required></textarea>
                             <div class="invalid-feedback">Pesan tidak boleh kosong.</div>
                         </div>
                         <div class="mb-3">
                             <label for="rating" class="form-label">Rating</label>
-                            <select class="form-select" id="rating" required>
+                            <select class="form-select" name="rating" id="rating" required>
                                 <option value="">Pilih rating</option>
                                 <option value="1">1 - Sangat Buruk</option>
                                 <option value="2">2 - Buruk</option>
@@ -82,7 +83,6 @@
     </div>
 
     <h4 class="text-center mt-5">Daftar Saran</h4>
-    <meta name="csrf-token" content="{{ csrf_token() }}">
 
 
 
