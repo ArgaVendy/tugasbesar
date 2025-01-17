@@ -7,6 +7,7 @@ use App\Http\Controllers\TransaksiController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\CartController; // Pastikan untuk mengimpor controller yang diperlukan
 use App\Http\Controllers\OtherController; // Jika Anda memiliki controller lain yang diperlukan
+use App\Http\Controllers\FeedbackController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -37,6 +38,10 @@ Route::get('/checkOut', [Controller::class, 'keranjang'])->name('keranjang');
 Route::get('/checkOut/{id}', [Controller::class, 'bayar'])->name('keranjang.bayar');
 Route::post('/ubah-status', [Controller::class, 'ubahStatus'])->name('ubahStatus');
 Route::post('/deleteItem', [Controller::class, 'deleteItem'])->name('deleteItem');
+
+Route::post('/feedback', [FeedbackController::class, 'store']);
+Route::get('/feedback', [FeedbackController::class, 'index']);
+
 
 
 // Contoh rute untuk mengarahkan ke fungsi dalam controller

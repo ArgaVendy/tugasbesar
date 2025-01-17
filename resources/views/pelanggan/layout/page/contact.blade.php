@@ -82,7 +82,9 @@
     </div>
 
     <h4 class="text-center mt-5">Daftar Saran</h4>
-    <div id="feedbackList" class="mt-3"></div>
+    <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
@@ -143,10 +145,68 @@
 @endsection
 
 <style>
-    /* CSS untuk memastikan gambar tampil dengan baik */
+    /* Gaya khusus untuk memastikan gambar tampil dengan baik */
     .card-img-custom {
         width: 100%;
         height: 350px;
-        object-fit: contain; /* Menampilkan gambar tanpa terpotong */
+        object-fit: cover; /* Menyesuaikan gambar agar tidak terdistorsi */
+        border-top-left-radius: 12px;
+        border-top-right-radius: 12px;
+    }
+
+    /* Gaya khusus untuk card-body */
+    .card-body {
+        padding: 1.5rem; /* Memberikan ruang yang cukup pada bagian dalam card */
+        text-align: center; /* Menengahkan teks di dalam card */
+        background-color: #ffffff; /* Warna latar belakang card */
+        border: 1px solid #e0e0e0; /* Menambahkan border tipis */
+        border-bottom-left-radius: 12px; /* Membulatkan sudut bawah kiri */
+        border-bottom-right-radius: 12px; /* Membulatkan sudut bawah kanan */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Menambahkan bayangan */
+    }
+
+    /* Judul card */
+    .card-title {
+        font-size: 1.25rem; /* Ukuran teks judul */
+        font-weight: 600; /* Membuat teks lebih tebal */
+        margin-bottom: 0.5rem;
+        color: #333333;
+    }
+
+    /* Teks card */
+    .card-text {
+        font-size: 1rem;
+        color: #666666;
+        margin-bottom: 1rem; /* Memberikan jarak dengan tombol */
+    }
+
+    /* Tombol di card */
+    .card-body .btn-primary {
+        background-color: #007bff; /* Warna tombol */
+        border: none; /* Menghapus border default tombol */
+        font-weight: 500; /* Membuat teks tombol lebih menonjol */
+        transition: all 0.3s ease-in-out; /* Efek transisi saat tombol dihover */
+    }
+
+    .card-body .btn-primary:hover {
+        background-color: #0056b3; /* Warna tombol saat dihover */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan saat dihover */
+    }
+
+    /* CSS untuk bagian form feedback */
+    .form-label {
+        font-weight: 500;
+        color: #333333;
+    }
+
+    .form-control, .form-select {
+        border-radius: 8px;
+    }
+
+    .btn-primary, .btn-secondary {
+        border-radius: 8px;
     }
 </style>
+
+
+
